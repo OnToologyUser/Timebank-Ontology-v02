@@ -135,7 +135,8 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "relatedMatch" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#relatedMatch"
+      "@id" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+      "@type" : "@id"
     },
     "hasAccreditedDuration" : {
       "@id" : "https://w3id.org/timebank#hasAccreditedDuration",
@@ -266,7 +267,8 @@
       "@type" : "@id"
     },
     "exactMatch" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch"
+      "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+      "@type" : "@id"
     },
     "Status" : {
       "@id" : "https://w3id.org/timebank#Status"
@@ -290,7 +292,8 @@
       "@id" : "https://w3id.org/timebank#FearOfDark"
     },
     "closeMatch" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch"
+      "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "@type" : "@id"
     },
     "Limitation" : {
       "@id" : "https://w3id.org/timebank#Limitation"
@@ -347,7 +350,8 @@
       "@id" : "https://w3id.org/timebank#Water"
     },
     "narrowMatch" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#narrowMatch"
+      "@id" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+      "@type" : "@id"
     },
     "Ahousename" : {
       "@id" : "http://linkedgeodata.org/ontology/addr%3Ahousename",
@@ -548,7 +552,8 @@
       "@id" : "https://w3id.org/timebank#UnevenTerrain"
     },
     "broadMatch" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#broadMatch"
+      "@id" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+      "@type" : "@id"
     },
     "Tools" : {
       "@id" : "https://w3id.org/timebank#Tools"
@@ -575,7 +580,8 @@
       "@type" : "@id"
     },
     "broaderTransitive" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#broaderTransitive"
+      "@id" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+      "@type" : "@id"
     },
     "Asubdistrict" : {
       "@id" : "http://linkedgeodata.org/ontology/addr%3Asubdistrict",
