@@ -20,7 +20,7 @@
                                          <http://www.w3.org/2006/time#2016> ,
                                          foaf: ;
                              <http://purl.org/dc/elements/1.1/title> "Timebank Ontology" ;
-                             dcterms:created "2019-10-19" ;
+                             dcterms:created "2020-04-01" ;
                              dcterms:creator "Ankit Tibrewal" ,
                                              "Subhayan Roy" ,
                                              "Tobias Grubenmann" ,
