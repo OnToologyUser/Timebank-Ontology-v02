@@ -165,7 +165,7 @@ dcterms:rights rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/timebank#hasNotEnvironment
 :hasNotEnvironment rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :is_not_environment_of ;
+                   owl:inverseOf :isNotEnvironmentOf ;
                    rdfs:domain :AddressPart ;
                    rdfs:range :Environment ;
                    rdfs:comment "Indicates that a certain Location Specifier has a specific environmental factor." ;
@@ -226,6 +226,9 @@ dcterms:rights rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/timebank#hasSubPart
 :hasSubPart rdf:type owl:ObjectProperty ;
             owl:inverseOf :isSubPartOf ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:domain :AddressPart ;
+            rdfs:range :AddressPart ;
             rdfs:comment <https://w3id.org/timebank> ,
                          "Indicates that the address part is a sub-part of another. A sub-part defines a place more precisely. A sub-part is always in the context of its super-part. For example, a streetnumber is a sub- part of the street." ;
             rdfs:label "has sub-part" .
@@ -381,6 +384,15 @@ dcterms:rights rdf:type owl:AnnotationProperty .
                 rdfs:label "is limitation of" .
 
 
+###  https://w3id.org/timebank#isNotEnvironmentOf
+:isNotEnvironmentOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Environment ;
+                    rdfs:range :AddressPart ;
+                    rdfs:comment "Indicates that a certain Location Specifier has a specific environmental factor." ;
+                    rdfs:isDefinedBy <https://w3id.org/timebank> ;
+                    rdfs:label "is not environment of" .
+
+
 ###  https://w3id.org/timebank#isOriginatorOf
 :isOriginatorOf rdf:type owl:ObjectProperty ;
                 rdfs:domain :User ;
@@ -475,7 +487,10 @@ dcterms:rights rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/timebank#isSubPartOf
-:isSubPartOf rdf:type owl:ObjectProperty ;
+:isSubPartOf rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:domain :AddressPart ;
+             rdfs:range :AddressPart ;
              rdfs:comment <https://w3id.org/timebank> ,
                           "Indicates that the address part is a sub-part of another. A sub-part defines a place more precisely. A sub-part is always in the context of its super-part. For example, a streetnumber is a sub- part of the street." ;
              rdfs:label "is sub-part of" .
@@ -497,15 +512,6 @@ dcterms:rights rdf:type owl:AnnotationProperty .
                 rdfs:comment "Indicates the time window in which the request can/should be completed." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
                 rdfs:label "is time window of" .
-
-
-###  https://w3id.org/timebank#is_not_environment_of
-:is_not_environment_of rdf:type owl:ObjectProperty ;
-                       rdfs:domain :Environment ;
-                       rdfs:range :AddressPart ;
-                       rdfs:comment "Indicates that a certain Location Specifier has a specific environmental factor." ;
-                       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                       rdfs:label "is not environment of" .
 
 
 ###  https://w3id.org/timebank#repeatsOn
@@ -740,10 +746,6 @@ time:Instant rdf:type owl:Class .
 
 ###  http://www.w3.org/2006/time#ProperInterval
 time:ProperInterval rdf:type owl:Class .
-
-
-###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class .
 
 
 ###  https://w3id.org/timebank#Accessibility
@@ -1569,8 +1571,8 @@ foaf:Person rdf:type owl:Class .
         rdfs:comment "The skill to assist with mowing the grass." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
         rdfs:label "Mowing" ;
-        skos:broaderTransitive :Maintenance ;
-        skos:broadMatch dbc:Lawn_care .
+        skos:broadMatch dbc:Lawn_care ;
+        skos:broaderTransitive :Maintenance .
 
 
 ###  https://w3id.org/timebank#NutsAllergy
