@@ -8,9 +8,6 @@
 
 <https://w3id.org/timebank> rdf:type owl:Ontology ;
                              owl:versionIRI <https://w3id.org/timebank/0.2> ;
-                             owl:imports <http://www.w3.org/2004/02/skos/core#> ,
-                                         <http://www.w3.org/2006/time#> ,
-                                         <http://xmlns.com/foaf/0.1/> ;
                              <http://purl.org/dc/elements/1.1/title> "Timebank Ontology" ;
                              <http://purl.org/dc/terms/created> "2020-04-01" ;
                              <http://purl.org/dc/terms/creator> "Ankit Tibrewal" ,
@@ -55,6 +52,30 @@
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+<http://www.w3.org/2004/02/skos/core#broadMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+<http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#relatedMatch
+<http://www.w3.org/2004/02/skos/core#relatedMatch> rdf:type owl:AnnotationProperty .
 
 
 ###  https://creativecommons.org/ns#license
@@ -740,6 +761,10 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 ###  http://www.w3.org/2006/time#ProperInterval
 <http://www.w3.org/2006/time#ProperInterval> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
 ###  https://w3id.org/timebank#Accessibility
@@ -2053,258 +2078,167 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 
 ###  https://w3id.org/timebank#Accessibility
-:Accessibility rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Environment ;
-               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Accessibility> .
+:Accessibility rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#AccessibleByPublicTransport
-:AccessibleByPublicTransport rdf:type owl:NamedIndividual ;
-                             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
-                             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Public_transport> .
+:AccessibleByPublicTransport rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Advice
-:Advice rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Consulting> .
+:Advice rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Allergy
-:Allergy rdf:type owl:NamedIndividual ;
-         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation ;
-         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Allergy> ;
-         <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/T78.4> .
+:Allergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Assembling
-:Assembling rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Crafting .
+:Assembling rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#AutomobileRepair
-:AutomobileRepair rdf:type owl:NamedIndividual ;
-                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair ;
-                  <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Auto_mechanic> .
+:AutomobileRepair rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Baking
-:Baking rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
-        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Baking> .
+:Baking rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Carpeting
-:Carpeting rdf:type owl:NamedIndividual ;
-           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WoodCrafting ;
-           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/:Carpentry> .
+:Carpeting rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Catering
-:Catering rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
-          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Catering> .
+:Catering rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Cats
-:Cats rdf:type owl:NamedIndividual ;
-      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Pets ;
-      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cat> .
+:Cats rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ChildCare
-:ChildCare rdf:type owl:NamedIndividual ;
-           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
-           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Child_care> .
+:ChildCare rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Cleaning
-:Cleaning rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Maintenance ;
-          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Cleaning> .
+:Cleaning rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ClimbingStairsDifficulty
-:ClimbingStairsDifficulty rdf:type owl:NamedIndividual ;
-                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
-                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/129016000> ,
-                                                                             <http://who.int/icf#d450-d469> .
+:ClimbingStairsDifficulty rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ClothesWashing
-:ClothesWashing rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Cleaning ;
-                <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Washing> .
+:ClothesWashing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#CognitiveImpairment
-:CognitiveImpairment rdf:type owl:NamedIndividual ;
-                     <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
-                     <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cognitive_deficit> ;
-                     <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/F06.7> ,
-                                                                        <http://snomed.info/id/110352000> ,
-                                                                        <http://who.int/icf#b164> .
+:CognitiveImpairment rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#CommonDisease
-:CommonDisease rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation .
+:CommonDisease rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ComputerProcessing
-:ComputerProcessing rdf:type owl:NamedIndividual ;
-                    <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
-                    <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Computer_skills> .
+:ComputerProcessing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ComputerRepair
-:ComputerRepair rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair ;
-                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Computer_repair_technician> .
+:ComputerRepair rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Cooking
-:Cooking rdf:type owl:NamedIndividual ;
-         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
-         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cooking> .
+:Cooking rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Counseling
-:Counseling rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Advice ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Counseling> .
+:Counseling rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Crafting
-:Crafting rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Craft> .
+:Crafting rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#CraftingClothes
-:CraftingClothes rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Crafting .
+:CraftingClothes rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DancingCompanion
-:DancingCompanion rdf:type owl:NamedIndividual ;
-                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
-                  <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Dance> .
+:DancingCompanion rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Depression
-:Depression rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
-            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.bioontology.org/ontology/ICD10/F32> ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Depression_(mood)> ;
-            <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://snomed.info/id/154965008> ,
-                                                              <http://snomed.info/id/154966009> ,
-                                                              <http://snomed.info/id/154967000> .
+:Depression rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Diabetes
-:Diabetes rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
-          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Diabetes_mellitus> ,
-                                                           <http://purl.bioontology.org/ontology/ICD10/E10-E14.9> ,
-                                                           <http://snomed.info/id/191044006> .
+:Diabetes rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Dishwashing
-:Dishwashing rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Dishwashing> .
+:Dishwashing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Dogs
-:Dogs rdf:type owl:NamedIndividual ;
-      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Dogs ;
-      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Dog> .
+:Dogs rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DressingAssistance
-:DressingAssistance rdf:type owl:NamedIndividual ;
-                    <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PersonalService .
+:DressingAssistance rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DressingProblem
-:DressingProblem rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/129039006> ,
-                                                                    <http://who.int/icf#d5400> .
+:DressingProblem rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingCars
-:DrivingCars rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingLightVehicles ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Automobile> .
+:DrivingCars rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingHeavyVehicles
-:DrivingHeavyVehicles rdf:type owl:NamedIndividual ;
-                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Transportation .
+:DrivingHeavyVehicles rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingLightVehicles
-:DrivingLightVehicles rdf:type owl:NamedIndividual ;
-                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Transportation .
+:DrivingLightVehicles rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingTractors
-:DrivingTractors rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingHeavyVehicles ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Tractor> .
+:DrivingTractors rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingTrucks
-:DrivingTrucks rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingHeavyVehicles ;
-               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Truck> .
+:DrivingTrucks rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingVans
-:DrivingVans rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingLightVehicles ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Automobile> .
+:DrivingVans rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrivingWithTrailers
-:DrivingWithTrailers rdf:type owl:NamedIndividual ;
-                     <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingHeavyVehicles ;
-                     <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Trailer_(vehicle)> .
+:DrivingWithTrailers rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#DrugAllergy
-:DrugAllergy rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Allergy ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Drug_allergy> ,
-                                                              <http://snomed.info/id/93431001> ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/Z88> .
+:DrugAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#EggAllergy
-:EggAllergy rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Egg_allergy> ,
-                                                             <http://snomed.info/id/157802003> ;
-            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/138050005> .
+:EggAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ElderlyCare
-:ElderlyCare rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Elderly_care> .
+:ElderlyCare rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Electricity
-:Electricity rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Electricity> .
+:Electricity rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ElectronicRepair
-:ElectronicRepair rdf:type owl:NamedIndividual ;
-                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair .
+:ElectronicRepair rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Environment
@@ -2312,152 +2246,99 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 
 ###  https://w3id.org/timebank#EnvironmentalAllergy
-:EnvironmentalAllergy rdf:type owl:NamedIndividual ;
-                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Allergy ;
-                      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/426232007> .
+:EnvironmentalAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#EventPlanning
-:EventPlanning rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
-               <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Event_planning> .
+:EventPlanning rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FearOfAnimals
-:FearOfAnimals rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SpecificPhobia ;
-               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Zoophobia> ,
-                                                                <http://snomed.info/id/54307006> .
+:FearOfAnimals rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FearOfCats
-:FearOfCats rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FearOfAnimals ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Ailurophobia> .
+:FearOfCats rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FearOfDark
-:FearOfDark rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SpecificPhobia ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Fear_of_the_dark> .
+:FearOfDark rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FearOfDogs
-:FearOfDogs rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FearOfAnimals ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cynophobia> .
+:FearOfDogs rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FearOfHeights
-:FearOfHeights rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SpecificPhobia ;
-               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Acrophobia> ,
-                                                                <http://snomed.info/id/58963008> .
+:FearOfHeights rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FinancialAdvice
-:FinancialAdvice rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Advice ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Financial_adviser> .
+:FinancialAdvice rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FoodAllergy
-:FoodAllergy rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Allergy ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Food_allergy> ,
-                                                              <http://snomed.info/id/157801005> .
+:FoodAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FoodPreparation
-:FoodPreparation rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService .
+:FoodPreparation rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#FoodService
-:FoodService rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Food_and_drink_preparation> .
+:FoodService rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Games
-:Games rdf:type owl:NamedIndividual ;
-       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation .
+:Games rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#GlutenAllergy
-:GlutenAllergy rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
-               <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Wheat_allergy> ;
-               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/441831003> .
+:GlutenAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Groceries
-:Groceries rdf:type owl:NamedIndividual ;
-           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SalesService ;
-           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Grocery_store> .
+:Groceries rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#HairCutting
-:HairCutting rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PersonalService ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Hairdresser> .
+:HairCutting rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#HeartDisease
-:HeartDisease rdf:type owl:NamedIndividual ;
-              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
-              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Heart_disease> ,
-                                                               <http://snomed.info/id/56265001> ;
-              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/I51.9> ,
-                                                                 <http://who.int/icf#b410> .
+:HeartDisease rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#HouseholdEquipmentRepair
-:HouseholdEquipmentRepair rdf:type owl:NamedIndividual ;
-                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair .
+:HouseholdEquipmentRepair rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#HygieneAssitance
-:HygieneAssitance rdf:type owl:NamedIndividual ;
-                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PersonalService .
+:HygieneAssitance rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Hypertension
-:Hypertension rdf:type owl:NamedIndividual ;
-              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
-              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Hypertension> ;
-              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/I10-I15.9> .
+:Hypertension rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Hypotension
-:Hypotension rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Hypotension> ,
-                                                              <http://purl.bioontology.org/ontology/ICD10/I95> .
+:Hypotension rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Internet
-:Internet rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
-          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Internet> .
+:Internet rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#InventoryManagement
-:InventoryManagement rdf:type owl:NamedIndividual ;
-                     <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
-                     <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Inventory> .
+:InventoryManagement rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Knitting
-:Knitting rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CraftingClothes ;
-          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Knitting> .
+:Knitting rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#LegalAdvice
-:LegalAdvice rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Advice ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Lawyer> .
+:LegalAdvice rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#LevelHigh
@@ -2485,9 +2366,7 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 
 ###  https://w3id.org/timebank#Lift
-:Lift rdf:type owl:NamedIndividual ;
-      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
-      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Elevator> .
+:Lift rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Limitation
@@ -2495,256 +2374,159 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 
 ###  https://w3id.org/timebank#LimitedAccessibilityRain
-:LimitedAccessibilityRain rdf:type owl:NamedIndividual ;
-                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WeatherConstraint ;
-                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Precipitation_(meteorology)> .
+:LimitedAccessibilityRain rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#LimitedAccessibilitySnow
-:LimitedAccessibilitySnow rdf:type owl:NamedIndividual ;
-                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WeatherConstraint ;
-                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Precipitation_(meteorology)> .
+:LimitedAccessibilitySnow rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Maintenance
-:Maintenance rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Maintenance> .
+:Maintenance rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#MentalDisorder
-:MentalDisorder rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation ;
-                <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.bioontology.org/ontology/ICD10/F00-F99.9> ;
-                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Mental_disorder> ,
-                                                                 <http://snomed.info/id/74732009> ;
-                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://who.int/icf#b1> .
+:MentalDisorder rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#MentallyIllCare
-:MentallyIllCare rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
-                 <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://dbpedia.org/resource/Caring_for_people_with_dementia> .
+:MentallyIllCare rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#MilkAllergy
-:MilkAllergy rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
-             <http://www.w3.org/2004/02/skos/core#closeMatch> <http://snomed.info/id/197021003> ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Milk_allergy> ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/138049005> .
+:MilkAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#MobilityProblem
-:MobilityProblem rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/Z74.0> ,
-                                                                    <http://snomed.info/id/102490005> ,
-                                                                    <http://who.int/icf#d4> .
+:MobilityProblem rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Mopping
-:Mopping rdf:type owl:NamedIndividual ;
-         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Cleaning .
+:Mopping rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Mowing
-:Mowing rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://dbpedia.org/resource/Category:Lawn_care> ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Maintenance .
+:Mowing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#NutsAllergy
-:NutsAllergy rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/91934008> ;
-             <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://dbpedia.org/resource/Tree_nut_allergy> .
+:NutsAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#OfficeWork
-:OfficeWork rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Office_work> .
+:OfficeWork rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#OnlineShopping
-:OnlineShopping rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SalesService ;
-                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Online_shopping> .
+:OnlineShopping rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PeopleCare
-:PeopleCare rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Caregiving> .
+:PeopleCare rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PerformingMusic
-:PerformingMusic rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
-                 <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Musical_performance> .
+:PerformingMusic rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PersonalService
-:PersonalService rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Personal_Care_Assistant> .
+:PersonalService rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Pets
-:Pets rdf:type owl:NamedIndividual ;
-      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Environment ;
-      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Pet> .
+:Pets rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PhoneCalls
-:PhoneCalls rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
-            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Telephone_call> .
+:PhoneCalls rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PhysicalInconvenience
-:PhysicalInconvenience rdf:type owl:NamedIndividual ;
-                       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation .
+:PhysicalInconvenience rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PhysicallyDisabledCare
-:PhysicallyDisabledCare rdf:type owl:NamedIndividual ;
-                        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
-                        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Nursing> .
+:PhysicallyDisabledCare rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Plumbing
-:Plumbing rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair ;
-          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Plumbing> .
+:Plumbing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PoorEyesight
-:PoorEyesight rdf:type owl:NamedIndividual ;
-              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
-              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Blindness> ,
-                                                                 <http://purl.bioontology.org/ontology/ICD10/H54> ,
-                                                                 <http://snomed.info/id/105597003> ,
-                                                                 <http://who.int/icf#b2102> .
+:PoorEyesight rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PoorHearing
-:PoorHearing rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
-             <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://snomed.info/id/141258002> ,
-                                                               <http://snomed.info/id/141259005> ,
-                                                               <http://snomed.info/id/141260000> ;
-             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Deafness> ,
-                                                                <http://who.int/icf#b230> .
+:PoorHearing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Pruning
-:Pruning rdf:type owl:NamedIndividual ;
-         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Maintenance ;
-         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Pruning> .
+:Pruning rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#PsychoticEpisode
-:PsychoticEpisode rdf:type owl:NamedIndividual ;
-                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
-                  <http://www.w3.org/2004/02/skos/core#closeMatch> <http://snomed.info/id/231436002> ;
-                  <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Psychotic_episode> ;
-                  <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/F20-F29.9> .
+:PsychoticEpisode rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#RecordingNotes
-:RecordingNotes rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork .
+:RecordingNotes rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Recreation
-:Recreation rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill .
+:Recreation rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Repair
-:Repair rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Maintenance,_repair,_and_operations> .
+:Repair rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Rheumatism
-:Rheumatism rdf:type owl:NamedIndividual ;
-            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Rheumatism> ,
-                                                             <http://snomed.info/id/29913006> ;
-            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/M79.0> .
+:Rheumatism rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SalesService
-:SalesService rdf:type owl:NamedIndividual ;
-              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Sales> .
+:SalesService rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SeafoodAllergy
-:SeafoodAllergy rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
-                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Seafood_allergy> ,
-                                                                 <http://snomed.info/id/91937001> .
+:SeafoodAllergy rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SensitiveSkin
-:SensitiveSkin rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
-               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Sensitive_skin_type> ;
-               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://who.int/icf#b840> .
+:SensitiveSkin rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Sewing
-:Sewing rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CraftingClothes ;
-        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Sewing> .
+:Sewing rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SickCare
-:SickCare rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
-          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Nursing> .
+:SickCare rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Skill
-:Skill rdf:type owl:NamedIndividual ;
-       <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Skills> .
+:Skill rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SlipperyFloor
-:SlipperyFloor rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility .
+:SlipperyFloor rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SpeakingProblem
-:SpeakingProblem rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
-                 <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/286372005> ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://who.int/icf#d330> .
+:SpeakingProblem rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#SpecificPhobia
-:SpecificPhobia rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
-                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Specific_phobia> ,
-                                                                 <http://purl.bioontology.org/ontology/ICD10/F40.2> ;
-                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/386808001> .
+:SpecificPhobia rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Sports
-:Sports rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
-        <http://www.w3.org/2004/02/skos/core#relatedMatch> <dbt:Game> ,
-                                                           <http://dbpedia.org/resource/Sport> .
+:Sports rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Stairs
-:Stairs rdf:type owl:NamedIndividual ;
-        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
-        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Stairway> .
+:Stairs rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#StatusAssigned
@@ -2780,96 +2562,63 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 
 ###  https://w3id.org/timebank#StrokeHistory
-:StrokeHistory rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
-               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/138787005> ;
-               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Stroke> ,
-                                                                  <http://purl.bioontology.org/ontology/ICD10/I60-I69.9> .
+:StrokeHistory rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Supplies
-:Supplies rdf:type owl:NamedIndividual ;
-          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Environment .
+:Supplies rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Tailoring
-:Tailoring rdf:type owl:NamedIndividual ;
-           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CraftingClothes ;
-           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Tailor> .
+:Tailoring rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#ToiletUsingProblem
-:ToiletUsingProblem rdf:type owl:NamedIndividual ;
-                    <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
-                    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/129045003> ,
-                                                                       <http://who.int/icf#d530> .
+:ToiletUsingProblem rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Tools
-:Tools rdf:type owl:NamedIndividual ;
-       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
-       <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Tool> .
+:Tools rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Transportation
-:Transportation rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
-                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Transport> .
+:Transportation rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#TransportationAvailable
-:TransportationAvailable rdf:type owl:NamedIndividual ;
-                         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
-                         <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Transport> .
+:TransportationAvailable rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#TravelCompanion
-:TravelCompanion rdf:type owl:NamedIndividual ;
-                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
-                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Travel> .
+:TravelCompanion rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#UnevenTerrain
-:UnevenTerrain rdf:type owl:NamedIndividual ;
-               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility .
+:UnevenTerrain rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#WalkingProblem
-:WalkingProblem rdf:type owl:NamedIndividual ;
-                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
-                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/156615004> ;
-                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/R26.2> ,
-                                                                   <http://who.int/icf#d450-d469> .
+:WalkingProblem rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Water
-:Water rdf:type owl:NamedIndividual ;
-       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
-       <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Water_supply> .
+:Water rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#WeatherConstraint
-:WeatherConstraint rdf:type owl:NamedIndividual ;
-                   <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
-                   <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Meteorology> .
+:WeatherConstraint rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#WoodCarving
-:WoodCarving rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WoodCrafting ;
-             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Woodcarving> .
+:WoodCarving rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#WoodCrafting
-:WoodCrafting rdf:type owl:NamedIndividual ;
-              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Crafting ;
-              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Woodworking> .
+:WoodCrafting rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/timebank#Writing
-:Writing rdf:type owl:NamedIndividual ;
-         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
-         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Writing> .
+:Writing rdf:type owl:NamedIndividual .
 
 
 #################################################################
@@ -2878,207 +2627,298 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 :Accessibility rdfs:comment "Describes any revelant information regarding the accessibility of a location of a request." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Accessibility" .
+               rdfs:label "Accessibility" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Environment ;
+               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Accessibility> .
 
 
 :AccessibleByPublicTransport rdfs:comment "The location is accessible by public transport." ;
                              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                             rdfs:label "Accessible by Public Transport" .
+                             rdfs:label "Accessible by Public Transport" ;
+                             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
+                             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Public_transport> .
 
 
 :Advice rdfs:comment "Skills to provide particular services which requires some sort of education or training." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Advice" .
+        rdfs:label "Advice" ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Consulting> .
 
 
 :Allergy rdfs:comment "A collection of allergies, which is caused by hypersensitivity of the immune system." ;
          rdfs:isDefinedBy <https://w3id.org/timebank> ;
-         rdfs:label "Allergy" .
+         rdfs:label "Allergy" ;
+         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation ;
+         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Allergy> ;
+         <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/T78.4> .
 
 
 :Assembling rdfs:comment "The skill to assemble items like furniture and other things." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Assembling" .
+            rdfs:label "Assembling" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Crafting .
 
 
 :AutomobileRepair rdfs:comment "The skill to repair automobiles." ;
                   rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                  rdfs:label "Automobile Repair" .
+                  rdfs:label "Automobile Repair" ;
+                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair ;
+                  <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Auto_mechanic> .
 
 
 :Baking rdfs:comment "The skill to assist with baking." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Baking" .
+        rdfs:label "Baking" ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Baking> .
 
 
 :Carpeting rdfs:comment "The skill to do carpenting." ;
            rdfs:isDefinedBy <https://w3id.org/timebank> ;
-           rdfs:label "Carpenting" .
+           rdfs:label "Carpenting" ;
+           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WoodCrafting ;
+           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/:Carpentry> .
 
 
 :Catering rdfs:comment "The skill to assist with catering requirements." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Catering" .
+          rdfs:label "Catering" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
+          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Catering> .
 
 
 :Cats rdfs:comment "Indicates that cats might be present." ;
       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-      rdfs:label "Cats" .
+      rdfs:label "Cats" ;
+      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Pets ;
+      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cat> .
 
 
 :ChildCare rdfs:comment "The skill to provide care for children." ;
            rdfs:isDefinedBy <https://w3id.org/timebank> ;
-           rdfs:label "Child Care" .
+           rdfs:label "Child Care" ;
+           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
+           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Child_care> .
 
 
 :Cleaning rdfs:comment "The skill to assist with general cleaning tasks." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Cleaning" .
+          rdfs:label "Cleaning" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Maintenance ;
+          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Cleaning> .
 
 
 :ClimbingStairsDifficulty rdfs:comment "The person has difficulty in climbing up stairs." ;
                           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                          rdfs:label "Difficulty in Climbing Stairs" .
+                          rdfs:label "Difficulty in Climbing Stairs" ;
+                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
+                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/129016000> ,
+                                                                             <http://who.int/icf#d450-d469> .
 
 
 :ClothesWashing rdfs:comment "The skill to assist with washing clothes." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Clothes Washing" .
+                rdfs:label "Clothes Washing" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Cleaning ;
+                <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Washing> .
 
 
 :CognitiveImpairment rdfs:comment "A person with cognitive impairment can't think and remember things clearly." ;
                      rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                     rdfs:label "Cognitive Impairment" .
+                     rdfs:label "Cognitive Impairment" ;
+                     <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
+                     <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cognitive_deficit> ;
+                     <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/F06.7> ,
+                                                                        <http://snomed.info/id/110352000> ,
+                                                                        <http://who.int/icf#b164> .
 
 
 :CommonDisease rdfs:comment "A collection of diseases that are common, especially for elderly people" ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Common Disease" .
+               rdfs:label "Common Disease" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation .
 
 
 :ComputerProcessing rdfs:comment "The skill to assist with processing data computers." ;
                     rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                    rdfs:label "Computer Processing" .
+                    rdfs:label "Computer Processing" ;
+                    <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
+                    <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Computer_skills> .
 
 
 :ComputerRepair rdfs:comment "The skill to fix problems with computers." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Computer Repair" .
+                rdfs:label "Computer Repair" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair ;
+                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Computer_repair_technician> .
 
 
 :Cooking rdfs:comment "The skill to assist with cooking in general." ;
          rdfs:isDefinedBy <https://w3id.org/timebank> ;
-         rdfs:label "Cooking" .
+         rdfs:label "Cooking" ;
+         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
+         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cooking> .
 
 
 :Counseling rdfs:comment "The skill to advice people on psychological matters." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Counseling" .
+            rdfs:label "Counseling" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Advice ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Counseling> .
 
 
 :Crafting rdfs:comment "Crafting skills." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Crafting" .
+          rdfs:label "Crafting" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Craft> .
 
 
 :CraftingClothes rdfs:comment "The ability to craft any kind of clothes." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Crafting Clothes" .
+                 rdfs:label "Crafting Clothes" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Crafting .
 
 
 :DancingCompanion rdfs:comment "The ability to act as a dancing companion." ;
                   rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                  rdfs:label "Dancing Companion" .
+                  rdfs:label "Dancing Companion" ;
+                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
+                  <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Dance> .
 
 
 :Depression rdfs:comment "A person with depression has a depressed mood over a long period and may even have thoughts of suicide." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Depression" .
+            rdfs:label "Depression" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
+            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.bioontology.org/ontology/ICD10/F32> ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Depression_(mood)> ;
+            <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://snomed.info/id/154965008> ,
+                                                              <http://snomed.info/id/154966009> ,
+                                                              <http://snomed.info/id/154967000> .
 
 
 :Diabetes rdfs:comment "A disorder characterized by high blood sugar levels during a long period." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Diabetes Mellitus" .
+          rdfs:label "Diabetes Mellitus" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
+          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Diabetes_mellitus> ,
+                                                           <http://purl.bioontology.org/ontology/ICD10/E10-E14.9> ,
+                                                           <http://snomed.info/id/191044006> .
 
 
 :Dishwashing rdfs:comment "The skill to assist with washing dishes." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Dishwashing" .
+             rdfs:label "Dishwashing" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Dishwashing> .
 
 
 :Dogs rdfs:comment "Indicates that dogs might be present." ;
       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-      rdfs:label "Dogs" .
+      rdfs:label "Dogs" ;
+      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Dogs ;
+      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Dog> .
 
 
 :DressingAssistance rdfs:comment "The skill to assist someone with dressing." ;
                     rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                    rdfs:label "Dressing Assistance" .
+                    rdfs:label "Dressing Assistance" ;
+                    <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PersonalService .
 
 
 :DressingProblem rdfs:comment "The person has difficulties dressing himself." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Dressing Problem" .
+                 rdfs:label "Dressing Problem" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/129039006> ,
+                                                                    <http://who.int/icf#d5400> .
 
 
 :DrivingCars rdfs:comment "Experience in driving cars." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Driving Cars" .
+             rdfs:label "Driving Cars" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingLightVehicles ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Automobile> .
 
 
 :DrivingHeavyVehicles rdfs:comment "Experience in driving heavy vehicles." ;
                       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                      rdfs:label "Driving Heavy Vehicles" .
+                      rdfs:label "Driving Heavy Vehicles" ;
+                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Transportation .
 
 
 :DrivingLightVehicles rdfs:comment "Experience in driving light vehicles." ;
                       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                      rdfs:label "Driving Light Vehicles" .
+                      rdfs:label "Driving Light Vehicles" ;
+                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Transportation .
 
 
 :DrivingTractors rdfs:comment "Experience in driving tractors." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Driving Tractors" .
+                 rdfs:label "Driving Tractors" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingHeavyVehicles ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Tractor> .
 
 
 :DrivingTrucks rdfs:comment "Experience in driving with trucks." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Driving Trucks" .
+               rdfs:label "Driving Trucks" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingHeavyVehicles ;
+               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Truck> .
 
 
 :DrivingVans rdfs:comment "Experience in driving vans." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Driving Vans" .
+             rdfs:label "Driving Vans" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingLightVehicles ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Automobile> .
 
 
 :DrivingWithTrailers rdfs:comment "Experience in driving with trailers." ;
                      rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                     rdfs:label "Driving with Trailers" .
+                     rdfs:label "Driving with Trailers" ;
+                     <http://www.w3.org/2004/02/skos/core#broaderTransitive> :DrivingHeavyVehicles ;
+                     <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Trailer_(vehicle)> .
 
 
 :DrugAllergy rdfs:comment "An allergy to drugs." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Drug Allergy" .
+             rdfs:label "Drug Allergy" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Allergy ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Drug_allergy> ,
+                                                              <http://snomed.info/id/93431001> ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/Z88> .
 
 
 :EggAllergy rdfs:comment "Allergy to eggs." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Egg Allergy" .
+            rdfs:label "Egg Allergy" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Egg_allergy> ,
+                                                             <http://snomed.info/id/157802003> ;
+            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/138050005> .
 
 
 :ElderlyCare rdfs:comment "The skill to provide care and support for the elderly." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Care for Elderly" .
+             rdfs:label "Care for Elderly" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Elderly_care> .
 
 
 :Electricity rdfs:comment "Electric outlet available." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Electricity" .
+             rdfs:label "Electricity" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Electricity> .
 
 
 :ElectronicRepair rdfs:comment "The skill to repair electronic devices." ;
                   rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                  rdfs:label "Electronic Repair" .
+                  rdfs:label "Electronic Repair" ;
+                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair .
 
 
 :Environment rdfs:comment "The environment describes relevant environmental factors of a request." ;
@@ -3088,127 +2928,182 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 :EnvironmentalAllergy rdfs:comment "An allergy to something in the environment such as dust mites, pollen, pet hair and cigarette smoke." ;
                       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                      rdfs:label "Environmental Allergy" .
+                      rdfs:label "Environmental Allergy" ;
+                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Allergy ;
+                      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/426232007> .
 
 
 :EventPlanning rdfs:comment "The skill to assist in planning and hosting events." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Event Planning" .
+               rdfs:label "Event Planning" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
+               <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Event_planning> .
 
 
 :FearOfAnimals rdfs:comment "Fear of animals. This can include dogs, cats, snakes, insects, etc." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Fear of Animals" .
+               rdfs:label "Fear of Animals" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SpecificPhobia ;
+               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Zoophobia> ,
+                                                                <http://snomed.info/id/54307006> .
 
 
 :FearOfCats rdfs:comment "Fear of cats." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Fear of Cats" .
+            rdfs:label "Fear of Cats" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FearOfAnimals ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Ailurophobia> .
 
 
 :FearOfDark rdfs:comment "Fear of dark places." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Fear of Dark" .
+            rdfs:label "Fear of Dark" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SpecificPhobia ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Fear_of_the_dark> .
 
 
 :FearOfDogs rdfs:comment "Fear of dogs." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Fear of Dogs" .
+            rdfs:label "Fear of Dogs" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FearOfAnimals ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Cynophobia> .
 
 
 :FearOfHeights rdfs:comment "Fear or phobia of heights." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Fear of Heights" .
+               rdfs:label "Fear of Heights" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SpecificPhobia ;
+               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Acrophobia> ,
+                                                                <http://snomed.info/id/58963008> .
 
 
 :FinancialAdvice rdfs:comment "Specialized in providing assistance with financial services. This can include helping with taxes and book keeping." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Financial Advice" .
+                 rdfs:label "Financial Advice" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Advice ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Financial_adviser> .
 
 
 :FoodAllergy rdfs:comment "An allergy to food such as milk, peanuts, eggs, fish, tree nuts, and fruit." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Food Allergy" .
+             rdfs:label "Food Allergy" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Allergy ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Food_allergy> ,
+                                                              <http://snomed.info/id/157801005> .
 
 
 :FoodPreparation rdfs:comment "The skill to assist with food preparation like meat cutting, washing of food, etc." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Food Preparation" .
+                 rdfs:label "Food Preparation" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodService .
 
 
 :FoodService rdfs:comment "The skill to provide services related to food products." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Food Service" .
+             rdfs:label "Food Service" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Food_and_drink_preparation> .
 
 
 :Games rdfs:comment "The skill to participate in board games, card games, etc." ;
        rdfs:isDefinedBy <https://w3id.org/timebank> ;
-       rdfs:label "Games" .
+       rdfs:label "Games" ;
+       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation .
 
 
 :GlutenAllergy rdfs:comment "Allergies to grains with gluten such as wheat, barley, rye, and oats." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Gluten Allergy" .
+               rdfs:label "Gluten Allergy" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
+               <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Wheat_allergy> ;
+               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/441831003> .
 
 
 :Groceries rdfs:comment "The skill to help buying groceries." ;
            rdfs:isDefinedBy <https://w3id.org/timebank> ;
-           rdfs:label "Groceries" .
+           rdfs:label "Groceries" ;
+           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SalesService ;
+           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Grocery_store> .
 
 
 :HairCutting rdfs:comment "Ability to cut someone else's hair." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Hair Cutting" .
+             rdfs:label "Hair Cutting" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PersonalService ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Hairdresser> .
 
 
 :HeartDisease rdfs:comment "A condition of diseases that negatively affect one's heart such as blood vessel diseases and heart rhythm problems." ;
               rdfs:isDefinedBy <https://w3id.org/timebank> ;
-              rdfs:label "Heart Diseases" .
+              rdfs:label "Heart Diseases" ;
+              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
+              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Heart_disease> ,
+                                                               <http://snomed.info/id/56265001> ;
+              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/I51.9> ,
+                                                                 <http://who.int/icf#b410> .
 
 
 :HouseholdEquipmentRepair rdfs:comment "The skill to repair household equipment." ;
                           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                          rdfs:label "Houseshold Equipment Repair" .
+                          rdfs:label "Houseshold Equipment Repair" ;
+                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair .
 
 
 :HygieneAssitance rdfs:comment "The skill to assist someone on hygienical matters." ;
                   rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                  rdfs:label "Hygiene Assitance" .
+                  rdfs:label "Hygiene Assitance" ;
+                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PersonalService .
 
 
 :Hypertension rdfs:comment "The blood pressure is high in a long period." ;
               rdfs:isDefinedBy <https://w3id.org/timebank> ;
-              rdfs:label "Hypertension" .
+              rdfs:label "Hypertension" ;
+              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
+              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Hypertension> ;
+              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/I10-I15.9> .
 
 
 :Hypotension rdfs:comment "The blood pressure is low in a long period." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Hypotension" .
+             rdfs:label "Hypotension" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Hypotension> ,
+                                                              <http://purl.bioontology.org/ontology/ICD10/I95> .
 
 
 :Internet rdfs:comment "Internet is available." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Internet" .
+          rdfs:label "Internet" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
+          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Internet> .
 
 
 :InventoryManagement rdfs:comment "The skill to assist with inventory management." ;
                      rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                     rdfs:label "Inventory Management" .
+                     rdfs:label "Inventory Management" ;
+                     <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
+                     <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Inventory> .
 
 
 :Knitting rdfs:comment "Specialized in knitting clothes." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Knitting" .
+          rdfs:label "Knitting" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CraftingClothes ;
+          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Knitting> .
 
 
 :LegalAdvice rdfs:comment "Specialized in providing legal assistance." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Legal Advice" .
+             rdfs:label "Legal Advice" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Advice ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Lawyer> .
 
 
 :Lift rdfs:comment "A lift/elevator is available." ;
       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-      rdfs:label <https://w3id.org/Lift> .
+      rdfs:label <https://w3id.org/Lift> ;
+      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
+      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Elevator> .
 
 
 :Limitation rdfs:comment "Limitations can be anything which prevents or limits the extent to which a user can help somebody else." ;
@@ -3218,272 +3113,402 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 :LimitedAccessibilityRain rdfs:comment "The place is difficult to access during rainfall." ;
                           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                          rdfs:label "Limited Accessibility: Rain" .
+                          rdfs:label "Limited Accessibility: Rain" ;
+                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WeatherConstraint ;
+                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Precipitation_(meteorology)> .
 
 
 :LimitedAccessibilitySnow rdfs:comment "The place is difficult to access during snowfall." ;
                           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                          rdfs:label "Limited Accessibility: Snow" .
+                          rdfs:label "Limited Accessibility: Snow" ;
+                          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WeatherConstraint ;
+                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Precipitation_(meteorology)> .
 
 
 :Maintenance rdfs:comment "The skill to help with maintenance of equipment." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Maintenance" .
+             rdfs:label "Maintenance" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Maintenance> .
 
 
 :MentalDisorder rdfs:comment "Disorders that affect the mental states of a person." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Mental Disorder" .
+                rdfs:label "Mental Disorder" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation ;
+                <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.bioontology.org/ontology/ICD10/F00-F99.9> ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Mental_disorder> ,
+                                                                 <http://snomed.info/id/74732009> ;
+                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://who.int/icf#b1> .
 
 
 :MentallyIllCare rdfs:comment "The skill to provide care for the mentally ill." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Care Mentally Ill People" .
+                 rdfs:label "Care Mentally Ill People" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
+                 <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://dbpedia.org/resource/Caring_for_people_with_dementia> .
 
 
 :MilkAllergy rdfs:comment "Allergy to milk." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Milk Allergy" .
+             rdfs:label "Milk Allergy" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
+             <http://www.w3.org/2004/02/skos/core#closeMatch> <http://snomed.info/id/197021003> ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Milk_allergy> ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/138049005> .
 
 
 :MobilityProblem rdfs:comment "Difficulties with moving around physically such as having difficulties using toliet, dressing, walking and so on." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Mobility Problem" .
+                 rdfs:label "Mobility Problem" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/Z74.0> ,
+                                                                    <http://snomed.info/id/102490005> ,
+                                                                    <http://who.int/icf#d4> .
 
 
 :Mopping rdfs:comment "The skill to assist with mopping floors, etc." ;
          rdfs:isDefinedBy <https://w3id.org/timebank> ;
-         rdfs:label "Mopping" .
+         rdfs:label "Mopping" ;
+         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Cleaning .
 
 
 :Mowing rdfs:comment "The skill to assist with mowing the grass." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Mowing" .
+        rdfs:label "Mowing" ;
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://dbpedia.org/resource/Category:Lawn_care> ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Maintenance .
 
 
 :NutsAllergy rdfs:comment "Allergy to nuts such as almonds, walnuts, pecans, and peanuts." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Nuts Allergy" .
+             rdfs:label "Nuts Allergy" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/91934008> ;
+             <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://dbpedia.org/resource/Tree_nut_allergy> .
 
 
 :OfficeWork rdfs:comment "The skill to provide help with office related work." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Office Work" .
+            rdfs:label "Office Work" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Office_work> .
 
 
 :OnlineShopping rdfs:comment "The skill to assist in buying things online." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Online Shopping" .
+                rdfs:label "Online Shopping" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :SalesService ;
+                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Online_shopping> .
 
 
 :PeopleCare rdfs:comment "The skill to provide care for people." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Care for People" .
+            rdfs:label "Care for People" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Caregiving> .
 
 
 :PerformingMusic rdfs:comment "The skill to entertain others by performing music." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Performing Music" .
+                 rdfs:label "Performing Music" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
+                 <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Musical_performance> .
 
 
 :PersonalService rdfs:comment "Personal services which include hygiene and daily care." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Personal Service" .
+                 rdfs:label "Personal Service" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Personal_Care_Assistant> .
 
 
 :Pets rdfs:comment "Indicates that pets might be present." ;
       rdfs:isDefinedBy <https://w3id.org/timebank> ;
-      rdfs:label "Pets" .
+      rdfs:label "Pets" ;
+      <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Environment ;
+      <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Pet> .
 
 
 :PhoneCalls rdfs:comment "The skill to perform phone calls." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Phone Calls" .
+            rdfs:label "Phone Calls" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
+            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Telephone_call> .
 
 
 :PhysicalInconvenience rdfs:comment "This is a collection of physical disorders that negatively affect a person's daily life." ;
                        rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                       rdfs:label "Physical Inconvenience" .
+                       rdfs:label "Physical Inconvenience" ;
+                       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Limitation .
 
 
 :PhysicallyDisabledCare rdfs:comment "The skill to provide care for the physically disabled." ;
                         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                        rdfs:label "Care for Physically Disabled" .
+                        rdfs:label "Care for Physically Disabled" ;
+                        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
+                        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Nursing> .
 
 
 :Plumbing rdfs:comment "Skill to perform plumbing and repairs on pipe installation." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Plumbing" .
+          rdfs:label "Plumbing" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Repair ;
+          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Plumbing> .
 
 
 :PoorEyesight rdfs:comment "Having difficulties seeing objects clearly." ;
               rdfs:isDefinedBy <https://w3id.org/timebank> ;
-              rdfs:label "Poor Eyesight" .
+              rdfs:label "Poor Eyesight" ;
+              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
+              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Blindness> ,
+                                                                 <http://purl.bioontology.org/ontology/ICD10/H54> ,
+                                                                 <http://snomed.info/id/105597003> ,
+                                                                 <http://who.int/icf#b2102> .
 
 
 :PoorHearing rdfs:comment "Having difficulties hearing voices clearly." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Poor Hearing" .
+             rdfs:label "Poor Hearing" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
+             <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://snomed.info/id/141258002> ,
+                                                               <http://snomed.info/id/141259005> ,
+                                                               <http://snomed.info/id/141260000> ;
+             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Deafness> ,
+                                                                <http://who.int/icf#b230> .
 
 
 :Pruning rdfs:comment "The skill to assist with pruning shrubs and twigs." ;
          rdfs:isDefinedBy <https://w3id.org/timebank> ;
-         rdfs:label "Pruning" .
+         rdfs:label "Pruning" ;
+         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Maintenance ;
+         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Pruning> .
 
 
 :PsychoticEpisode rdfs:comment "A person with psychotic episode can not tell the difference between the reality and unreality and may have difficulty with social activities in daily life." ;
                   rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                  rdfs:label "Psychotic Episode" .
+                  rdfs:label "Psychotic Episode" ;
+                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
+                  <http://www.w3.org/2004/02/skos/core#closeMatch> <http://snomed.info/id/231436002> ;
+                  <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Psychotic_episode> ;
+                  <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/F20-F29.9> .
 
 
 :RecordingNotes rdfs:comment "The skill to assist with recording notes and entries." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Recording Notes" .
+                rdfs:label "Recording Notes" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork .
 
 
 :Recreation rdfs:comment "The skill to provide services related to recreation." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Recreation" .
+            rdfs:label "Recreation" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill .
 
 
 :Repair rdfs:comment "The Skill to repair equipment and facilities." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Repair" .
+        rdfs:label "Repair" ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Maintenance,_repair,_and_operations> .
 
 
 :Rheumatism rdfs:comment "Diseases that causes chronic pain in joints and muscles such as back, shoulder and neck." ;
             rdfs:isDefinedBy <https://w3id.org/timebank> ;
-            rdfs:label "Rheumatism" .
+            rdfs:label "Rheumatism" ;
+            <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Rheumatism> ,
+                                                             <http://snomed.info/id/29913006> ;
+            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/M79.0> .
 
 
 :SalesService rdfs:comment "The skill to help with selling and buying products." ;
               rdfs:isDefinedBy <https://w3id.org/timebank> ;
-              rdfs:label "Sales Service" .
+              rdfs:label "Sales Service" ;
+              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+              <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Sales> .
 
 
 :SeafoodAllergy rdfs:comment "Allergy to any kind of seafood." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Seafood Allergy" .
+                rdfs:label "Seafood Allergy" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :FoodAllergy ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Seafood_allergy> ,
+                                                                 <http://snomed.info/id/91937001> .
 
 
 :SensitiveSkin rdfs:comment "Skins are too sensitive to a wide variety of factors such as weather, pets, stress and dust." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Sensitive Skin" .
+               rdfs:label "Sensitive Skin" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
+               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Sensitive_skin_type> ;
+               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://who.int/icf#b840> .
 
 
 :Sewing rdfs:comment "Specialized in sewing clothes." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Sewing" .
+        rdfs:label "Sewing" ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CraftingClothes ;
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Sewing> .
 
 
 :SickCare rdfs:comment "The skill to provide care for sick people." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Care for Sick People" .
+          rdfs:label "Care for Sick People" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PeopleCare ;
+          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Nursing> .
 
 
 :Skill rdfs:comment "Skills define the capabilities of a user. Users and Timebank requests can be associated to a certain skill (or multiple skills) to facilitate the matching of helper and requester." ;
        rdfs:isDefinedBy <https://w3id.org/timebank> ;
-       rdfs:label "Skill" .
+       rdfs:label "Skill" ;
+       <http://www.w3.org/2004/02/skos/core#closeMatch> <http://dbpedia.org/resource/Category:Skills> .
 
 
 :SlipperyFloor rdfs:comment "The person needs to be aware of slippery floor." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Splippery Floor" .
+               rdfs:label "Splippery Floor" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility .
 
 
 :SpeakingProblem rdfs:comment "The person has difficulties speaking clearly due to body function problems such as injuries to the brain, mouth or throat." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Speaking Problem" .
+                 rdfs:label "Speaking Problem" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :PhysicalInconvenience ;
+                 <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/286372005> ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://who.int/icf#d330> .
 
 
 :SpecificPhobia rdfs:comment "Fear of specific objects such as dogs, cats, heights, dark places, and so on." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Specific Phobia" .
+                rdfs:label "Specific Phobia" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MentalDisorder ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Specific_phobia> ,
+                                                                 <http://purl.bioontology.org/ontology/ICD10/F40.2> ;
+                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/386808001> .
 
 
 :Sports rdfs:comment "The skill to participate in sport activities." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Sports" .
+        rdfs:label "Sports" ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
+        <http://www.w3.org/2004/02/skos/core#relatedMatch> <dbt:Game> ,
+                                                           <http://dbpedia.org/resource/Sport> .
 
 
 :Stairs rdfs:comment "The person might have to climb stairs to complete the task." ;
         rdfs:isDefinedBy <https://w3id.org/timebank> ;
-        rdfs:label "Stairs" .
+        rdfs:label "Stairs" ;
+        <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Stairway> .
 
 
 :StrokeHistory rdfs:comment "It indicates a person once had a storke. A stroke happens when blood flow to the brain is blocked and oxygen for the brain cells is insufficient, which could leads to cell death." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "History of Strokes" .
+               rdfs:label "History of Strokes" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CommonDisease ;
+               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/138787005> ;
+               <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Stroke> ,
+                                                                  <http://purl.bioontology.org/ontology/ICD10/I60-I69.9> .
 
 
 :Supplies rdfs:comment "Availability of specific supplies to complete a task." ;
           rdfs:isDefinedBy <https://w3id.org/timebank> ;
-          rdfs:label "Supplies" .
+          rdfs:label "Supplies" ;
+          <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Environment .
 
 
 :Tailoring rdfs:comment "Specialized in providing tailoring services." ;
            rdfs:isDefinedBy <https://w3id.org/timebank> ;
-           rdfs:label "Tailoring" .
+           rdfs:label "Tailoring" ;
+           <http://www.w3.org/2004/02/skos/core#broaderTransitive> :CraftingClothes ;
+           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Tailor> .
 
 
 :ToiletUsingProblem rdfs:comment "The person has difficulties using toilet." ;
                     rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                    rdfs:label "Toilet Using Problem" .
+                    rdfs:label "Toilet Using Problem" ;
+                    <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
+                    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/129045003> ,
+                                                                       <http://who.int/icf#d530> .
 
 
 :Tools rdfs:comment "Tools can be provided." ;
        rdfs:isDefinedBy <https://w3id.org/timebank> ;
-       rdfs:label "Tools" .
+       rdfs:label "Tools" ;
+       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
+       <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Tool> .
 
 
 :Transportation rdfs:comment "The skill to provide services related to transportation." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "TransportationServices" .
+                rdfs:label "TransportationServices" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Skill ;
+                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Transport> .
 
 
 :TransportationAvailable rdfs:comment "Transportation necessary to complete the task can be provided." ;
                          rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                         rdfs:label "Transportation Available" .
+                         rdfs:label "Transportation Available" ;
+                         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
+                         <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Transport> .
 
 
 :TravelCompanion rdfs:comment "The ability to act as a travel companion." ;
                  rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                 rdfs:label "Travel Companion" .
+                 rdfs:label "Travel Companion" ;
+                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Recreation ;
+                 <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Travel> .
 
 
 :UnevenTerrain rdfs:comment "The person needs equipment (e.g. shoes) suitable for uneven terrain." ;
                rdfs:isDefinedBy <https://w3id.org/timebank> ;
-               rdfs:label "Uneven Terrain" .
+               rdfs:label "Uneven Terrain" ;
+               <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility .
 
 
 :WalkingProblem rdfs:comment "The person has difficulties walking." ;
                 rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                rdfs:label "Walking Problem" .
+                rdfs:label "Walking Problem" ;
+                <http://www.w3.org/2004/02/skos/core#broaderTransitive> :MobilityProblem ;
+                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://snomed.info/id/156615004> ;
+                <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/ICD10/R26.2> ,
+                                                                   <http://who.int/icf#d450-d469> .
 
 
 :Water rdfs:comment "Water outlet is available." ;
        rdfs:isDefinedBy <https://w3id.org/timebank> ;
-       rdfs:label "Water" .
+       rdfs:label "Water" ;
+       <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Supplies ;
+       <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Water_supply> .
 
 
 :WeatherConstraint rdfs:comment "The place is difficult to access during bad weather (e.g. snow)." ;
                    rdfs:isDefinedBy <https://w3id.org/timebank> ;
-                   rdfs:label "Weather Constraint" .
+                   rdfs:label "Weather Constraint" ;
+                   <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Accessibility ;
+                   <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://dbpedia.org/resource/Meteorology> .
 
 
 :WoodCarving rdfs:comment "The skill to Carve items out of wood." ;
              rdfs:isDefinedBy <https://w3id.org/timebank> ;
-             rdfs:label "Wood Carving" .
+             rdfs:label "Wood Carving" ;
+             <http://www.w3.org/2004/02/skos/core#broaderTransitive> :WoodCrafting ;
+             <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Woodcarving> .
 
 
 :WoodCrafting rdfs:comment "Crafting skill with wood as base material." ;
               rdfs:isDefinedBy <https://w3id.org/timebank> ;
-              rdfs:label "Wood Crafting" .
+              rdfs:label "Wood Crafting" ;
+              <http://www.w3.org/2004/02/skos/core#broaderTransitive> :Crafting ;
+              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Woodworking> .
 
 
 :Writing rdfs:comment "The skill to assist with written work, like writing or reading a letter." ;
          rdfs:isDefinedBy <https://w3id.org/timebank> ;
-         rdfs:label "Writing" .
+         rdfs:label "Writing" ;
+         <http://www.w3.org/2004/02/skos/core#broaderTransitive> :OfficeWork ;
+         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Category:Writing> .
 
 
 #################################################################
