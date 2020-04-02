@@ -2,23 +2,17 @@
 <rdf:RDF xmlns="https://w3id.org/timebank#"
      xml:base="https://w3id.org/timebank"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-     xmlns:ns1="https://creativecommons.org/ns#"
+     xmlns:ns="https://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:wot="http://xmlns.com/wot/0.1/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/timebank">
         <owl:versionIRI rdf:resource="https://w3id.org/timebank/0.2"/>
-        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
-        <owl:imports rdf:resource="http://www.w3.org/2006/time#"/>
-        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <dc:title>Timebank Ontology</dc:title>
         <terms:created>2020-04-01</terms:created>
         <terms:creator>Ankit Tibrewal</terms:creator>
@@ -31,7 +25,7 @@
         <vann:preferredNamespaceUri>https://w3id.org/timebank</vann:preferredNamespaceUri>
         <rdfs:comment>An ontology to describe poeple and requests for timebanks. This includes the poeple&apos;s skills, limitations, and environment.</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
-        <ns1:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:Ontology>
     
 
@@ -94,6 +88,48 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
     
 
 
@@ -1079,6 +1115,13 @@ A way with highway=* or a square with place=square and the corresponding name sh
 
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
     
 
 
@@ -3377,419 +3420,287 @@ A way with highway=* or a square with place=square and the corresponding name sh
     <!-- https://w3id.org/timebank#Accessibility -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Accessibility">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Environment"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Accessibility"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Accessibility"/>
     
 
 
     <!-- https://w3id.org/timebank#AccessibleByPublicTransport -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#AccessibleByPublicTransport">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Public_transport"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#AccessibleByPublicTransport"/>
     
 
 
     <!-- https://w3id.org/timebank#Advice -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Advice">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Category:Consulting"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Advice"/>
     
 
 
     <!-- https://w3id.org/timebank#Allergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Allergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Allergy"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/T78.4"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Allergy"/>
     
 
 
     <!-- https://w3id.org/timebank#Assembling -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Assembling">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Crafting"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Assembling"/>
     
 
 
     <!-- https://w3id.org/timebank#AutomobileRepair -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#AutomobileRepair">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Auto_mechanic"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#AutomobileRepair"/>
     
 
 
     <!-- https://w3id.org/timebank#Baking -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Baking">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Baking"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Baking"/>
     
 
 
     <!-- https://w3id.org/timebank#Carpeting -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Carpeting">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WoodCrafting"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/:Carpentry"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Carpeting"/>
     
 
 
     <!-- https://w3id.org/timebank#Catering -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Catering">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Catering"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Catering"/>
     
 
 
     <!-- https://w3id.org/timebank#Cats -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Cats">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Pets"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cat"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Cats"/>
     
 
 
     <!-- https://w3id.org/timebank#ChildCare -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ChildCare">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Child_care"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ChildCare"/>
     
 
 
     <!-- https://w3id.org/timebank#Cleaning -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Cleaning">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Maintenance"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Cleaning"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Cleaning"/>
     
 
 
     <!-- https://w3id.org/timebank#ClimbingStairsDifficulty -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ClimbingStairsDifficulty">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/129016000"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#d450-d469"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ClimbingStairsDifficulty"/>
     
 
 
     <!-- https://w3id.org/timebank#ClothesWashing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ClothesWashing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Cleaning"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Washing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ClothesWashing"/>
     
 
 
     <!-- https://w3id.org/timebank#CognitiveImpairment -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#CognitiveImpairment">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cognitive_deficit"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F06.7"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/110352000"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#b164"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#CognitiveImpairment"/>
     
 
 
     <!-- https://w3id.org/timebank#CommonDisease -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#CommonDisease">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#CommonDisease"/>
     
 
 
     <!-- https://w3id.org/timebank#ComputerProcessing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ComputerProcessing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Computer_skills"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ComputerProcessing"/>
     
 
 
     <!-- https://w3id.org/timebank#ComputerRepair -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ComputerRepair">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Computer_repair_technician"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ComputerRepair"/>
     
 
 
     <!-- https://w3id.org/timebank#Cooking -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Cooking">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cooking"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Cooking"/>
     
 
 
     <!-- https://w3id.org/timebank#Counseling -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Counseling">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Advice"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Counseling"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Counseling"/>
     
 
 
     <!-- https://w3id.org/timebank#Crafting -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Crafting">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Craft"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Crafting"/>
     
 
 
     <!-- https://w3id.org/timebank#CraftingClothes -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#CraftingClothes">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Crafting"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#CraftingClothes"/>
     
 
 
     <!-- https://w3id.org/timebank#DancingCompanion -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DancingCompanion">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Dance"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DancingCompanion"/>
     
 
 
     <!-- https://w3id.org/timebank#Depression -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Depression">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
-        <skos:closeMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F32"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Depression_(mood)"/>
-        <skos:narrowMatch rdf:resource="http://snomed.info/id/154965008"/>
-        <skos:narrowMatch rdf:resource="http://snomed.info/id/154966009"/>
-        <skos:narrowMatch rdf:resource="http://snomed.info/id/154967000"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Depression"/>
     
 
 
     <!-- https://w3id.org/timebank#Diabetes -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Diabetes">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Diabetes_mellitus"/>
-        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/E10-E14.9"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/191044006"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Diabetes"/>
     
 
 
     <!-- https://w3id.org/timebank#Dishwashing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Dishwashing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Dishwashing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Dishwashing"/>
     
 
 
     <!-- https://w3id.org/timebank#Dogs -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Dogs">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Dogs"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Dog"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Dogs"/>
     
 
 
     <!-- https://w3id.org/timebank#DressingAssistance -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DressingAssistance">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PersonalService"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DressingAssistance"/>
     
 
 
     <!-- https://w3id.org/timebank#DressingProblem -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DressingProblem">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/129039006"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#d5400"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DressingProblem"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingCars -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingCars">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingLightVehicles"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Automobile"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingCars"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingHeavyVehicles -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingHeavyVehicles">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Transportation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingHeavyVehicles"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingLightVehicles -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingLightVehicles">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Transportation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingLightVehicles"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingTractors -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingTractors">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingHeavyVehicles"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Tractor"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingTractors"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingTrucks -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingTrucks">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingHeavyVehicles"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Truck"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingTrucks"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingVans -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingVans">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingLightVehicles"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Automobile"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingVans"/>
     
 
 
     <!-- https://w3id.org/timebank#DrivingWithTrailers -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingWithTrailers">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingHeavyVehicles"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Trailer_(vehicle)"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrivingWithTrailers"/>
     
 
 
     <!-- https://w3id.org/timebank#DrugAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrugAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Allergy"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Drug_allergy"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/93431001"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/Z88"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#DrugAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#EggAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#EggAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Egg_allergy"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/157802003"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/138050005"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#EggAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#ElderlyCare -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ElderlyCare">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Elderly_care"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ElderlyCare"/>
     
 
 
     <!-- https://w3id.org/timebank#Electricity -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Electricity">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Electricity"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Electricity"/>
     
 
 
     <!-- https://w3id.org/timebank#ElectronicRepair -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ElectronicRepair">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ElectronicRepair"/>
     
 
 
@@ -3803,245 +3714,168 @@ A way with highway=* or a square with place=square and the corresponding name sh
     <!-- https://w3id.org/timebank#EnvironmentalAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#EnvironmentalAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Allergy"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/426232007"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#EnvironmentalAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#EventPlanning -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#EventPlanning">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Event_planning"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#EventPlanning"/>
     
 
 
     <!-- https://w3id.org/timebank#FearOfAnimals -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfAnimals">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SpecificPhobia"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Zoophobia"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/54307006"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfAnimals"/>
     
 
 
     <!-- https://w3id.org/timebank#FearOfCats -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfCats">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FearOfAnimals"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Ailurophobia"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfCats"/>
     
 
 
     <!-- https://w3id.org/timebank#FearOfDark -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfDark">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SpecificPhobia"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Fear_of_the_dark"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfDark"/>
     
 
 
     <!-- https://w3id.org/timebank#FearOfDogs -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfDogs">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FearOfAnimals"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cynophobia"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfDogs"/>
     
 
 
     <!-- https://w3id.org/timebank#FearOfHeights -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfHeights">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SpecificPhobia"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Acrophobia"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/58963008"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FearOfHeights"/>
     
 
 
     <!-- https://w3id.org/timebank#FinancialAdvice -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FinancialAdvice">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Advice"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Financial_adviser"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FinancialAdvice"/>
     
 
 
     <!-- https://w3id.org/timebank#FoodAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FoodAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Allergy"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Food_allergy"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/157801005"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FoodAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#FoodPreparation -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FoodPreparation">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FoodPreparation"/>
     
 
 
     <!-- https://w3id.org/timebank#FoodService -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FoodService">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Food_and_drink_preparation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#FoodService"/>
     
 
 
     <!-- https://w3id.org/timebank#Games -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Games">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Games"/>
     
 
 
     <!-- https://w3id.org/timebank#GlutenAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#GlutenAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Wheat_allergy"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/441831003"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#GlutenAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#Groceries -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Groceries">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SalesService"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Grocery_store"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Groceries"/>
     
 
 
     <!-- https://w3id.org/timebank#HairCutting -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HairCutting">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PersonalService"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Hairdresser"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HairCutting"/>
     
 
 
     <!-- https://w3id.org/timebank#HeartDisease -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HeartDisease">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Heart_disease"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/56265001"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I51.9"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#b410"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HeartDisease"/>
     
 
 
     <!-- https://w3id.org/timebank#HouseholdEquipmentRepair -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HouseholdEquipmentRepair">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HouseholdEquipmentRepair"/>
     
 
 
     <!-- https://w3id.org/timebank#HygieneAssitance -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HygieneAssitance">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PersonalService"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#HygieneAssitance"/>
     
 
 
     <!-- https://w3id.org/timebank#Hypertension -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Hypertension">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Hypertension"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I10-I15.9"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Hypertension"/>
     
 
 
     <!-- https://w3id.org/timebank#Hypotension -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Hypotension">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Hypotension"/>
-        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I95"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Hypotension"/>
     
 
 
     <!-- https://w3id.org/timebank#Internet -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Internet">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Internet"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Internet"/>
     
 
 
     <!-- https://w3id.org/timebank#InventoryManagement -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#InventoryManagement">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Inventory"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#InventoryManagement"/>
     
 
 
     <!-- https://w3id.org/timebank#Knitting -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Knitting">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CraftingClothes"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Knitting"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Knitting"/>
     
 
 
     <!-- https://w3id.org/timebank#LegalAdvice -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#LegalAdvice">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Advice"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Lawyer"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#LegalAdvice"/>
     
 
 
@@ -4084,10 +3918,7 @@ A way with highway=* or a square with place=square and the corresponding name sh
     <!-- https://w3id.org/timebank#Lift -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Lift">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Elevator"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Lift"/>
     
 
 
@@ -4101,409 +3932,273 @@ A way with highway=* or a square with place=square and the corresponding name sh
     <!-- https://w3id.org/timebank#LimitedAccessibilityRain -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#LimitedAccessibilityRain">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WeatherConstraint"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Precipitation_(meteorology)"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#LimitedAccessibilityRain"/>
     
 
 
     <!-- https://w3id.org/timebank#LimitedAccessibilitySnow -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#LimitedAccessibilitySnow">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WeatherConstraint"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Precipitation_(meteorology)"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#LimitedAccessibilitySnow"/>
     
 
 
     <!-- https://w3id.org/timebank#Maintenance -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Maintenance">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Maintenance"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Maintenance"/>
     
 
 
     <!-- https://w3id.org/timebank#MentalDisorder -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MentalDisorder">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
-        <skos:closeMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F00-F99.9"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Mental_disorder"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/74732009"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#b1"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MentalDisorder"/>
     
 
 
     <!-- https://w3id.org/timebank#MentallyIllCare -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MentallyIllCare">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
-        <skos:narrowMatch rdf:resource="http://dbpedia.org/resource/Caring_for_people_with_dementia"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MentallyIllCare"/>
     
 
 
     <!-- https://w3id.org/timebank#MilkAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MilkAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
-        <skos:closeMatch rdf:resource="http://snomed.info/id/197021003"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Milk_allergy"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/138049005"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MilkAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#MobilityProblem -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MobilityProblem">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/Z74.0"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/102490005"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#d4"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#MobilityProblem"/>
     
 
 
     <!-- https://w3id.org/timebank#Mopping -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Mopping">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Cleaning"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Mopping"/>
     
 
 
     <!-- https://w3id.org/timebank#Mowing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Mowing">
-        <skos:broadMatch rdf:resource="http://dbpedia.org/resource/Category:Lawn_care"/>
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Maintenance"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Mowing"/>
     
 
 
     <!-- https://w3id.org/timebank#NutsAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#NutsAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/91934008"/>
-        <skos:narrowMatch rdf:resource="http://dbpedia.org/resource/Tree_nut_allergy"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#NutsAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#OfficeWork -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#OfficeWork">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Category:Office_work"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#OfficeWork"/>
     
 
 
     <!-- https://w3id.org/timebank#OnlineShopping -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#OnlineShopping">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SalesService"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Online_shopping"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#OnlineShopping"/>
     
 
 
     <!-- https://w3id.org/timebank#PeopleCare -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PeopleCare">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Caregiving"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PeopleCare"/>
     
 
 
     <!-- https://w3id.org/timebank#PerformingMusic -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PerformingMusic">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Musical_performance"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PerformingMusic"/>
     
 
 
     <!-- https://w3id.org/timebank#PersonalService -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PersonalService">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Personal_Care_Assistant"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PersonalService"/>
     
 
 
     <!-- https://w3id.org/timebank#Pets -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Pets">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Environment"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Pet"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Pets"/>
     
 
 
     <!-- https://w3id.org/timebank#PhoneCalls -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PhoneCalls">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Telephone_call"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PhoneCalls"/>
     
 
 
     <!-- https://w3id.org/timebank#PhysicalInconvenience -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PhysicalInconvenience">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PhysicalInconvenience"/>
     
 
 
     <!-- https://w3id.org/timebank#PhysicallyDisabledCare -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PhysicallyDisabledCare">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Nursing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PhysicallyDisabledCare"/>
     
 
 
     <!-- https://w3id.org/timebank#Plumbing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Plumbing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Plumbing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Plumbing"/>
     
 
 
     <!-- https://w3id.org/timebank#PoorEyesight -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PoorEyesight">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Blindness"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/H54"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/105597003"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#b2102"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PoorEyesight"/>
     
 
 
     <!-- https://w3id.org/timebank#PoorHearing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PoorHearing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
-        <skos:narrowMatch rdf:resource="http://snomed.info/id/141258002"/>
-        <skos:narrowMatch rdf:resource="http://snomed.info/id/141259005"/>
-        <skos:narrowMatch rdf:resource="http://snomed.info/id/141260000"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Deafness"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#b230"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PoorHearing"/>
     
 
 
     <!-- https://w3id.org/timebank#Pruning -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Pruning">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Maintenance"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Pruning"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Pruning"/>
     
 
 
     <!-- https://w3id.org/timebank#PsychoticEpisode -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PsychoticEpisode">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
-        <skos:closeMatch rdf:resource="http://snomed.info/id/231436002"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Psychotic_episode"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F20-F29.9"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#PsychoticEpisode"/>
     
 
 
     <!-- https://w3id.org/timebank#RecordingNotes -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#RecordingNotes">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#RecordingNotes"/>
     
 
 
     <!-- https://w3id.org/timebank#Recreation -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Recreation">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Recreation"/>
     
 
 
     <!-- https://w3id.org/timebank#Repair -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Repair">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Maintenance,_repair,_and_operations"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Repair"/>
     
 
 
     <!-- https://w3id.org/timebank#Rheumatism -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Rheumatism">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Rheumatism"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/29913006"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/M79.0"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Rheumatism"/>
     
 
 
     <!-- https://w3id.org/timebank#SalesService -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SalesService">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Sales"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SalesService"/>
     
 
 
     <!-- https://w3id.org/timebank#SeafoodAllergy -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SeafoodAllergy">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Seafood_allergy"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/91937001"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SeafoodAllergy"/>
     
 
 
     <!-- https://w3id.org/timebank#SensitiveSkin -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SensitiveSkin">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Sensitive_skin_type"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#b840"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SensitiveSkin"/>
     
 
 
     <!-- https://w3id.org/timebank#Sewing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Sewing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CraftingClothes"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Sewing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Sewing"/>
     
 
 
     <!-- https://w3id.org/timebank#SickCare -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SickCare">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Nursing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SickCare"/>
     
 
 
     <!-- https://w3id.org/timebank#Skill -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Skill">
-        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Category:Skills"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Skill"/>
     
 
 
     <!-- https://w3id.org/timebank#SlipperyFloor -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SlipperyFloor">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SlipperyFloor"/>
     
 
 
     <!-- https://w3id.org/timebank#SpeakingProblem -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SpeakingProblem">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/286372005"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#d330"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SpeakingProblem"/>
     
 
 
     <!-- https://w3id.org/timebank#SpecificPhobia -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SpecificPhobia">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Specific_phobia"/>
-        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F40.2"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/386808001"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#SpecificPhobia"/>
     
 
 
     <!-- https://w3id.org/timebank#Sports -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Sports">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
-        <skos:relatedMatch rdf:resource="dbt:Game"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Sport"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Sports"/>
     
 
 
     <!-- https://w3id.org/timebank#Stairs -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Stairs">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Stairway"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Stairs"/>
     
 
 
@@ -4558,153 +4253,105 @@ A way with highway=* or a square with place=square and the corresponding name sh
     <!-- https://w3id.org/timebank#StrokeHistory -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#StrokeHistory">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/138787005"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Stroke"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I60-I69.9"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#StrokeHistory"/>
     
 
 
     <!-- https://w3id.org/timebank#Supplies -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Supplies">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Environment"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Supplies"/>
     
 
 
     <!-- https://w3id.org/timebank#Tailoring -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Tailoring">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CraftingClothes"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Tailor"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Tailoring"/>
     
 
 
     <!-- https://w3id.org/timebank#ToiletUsingProblem -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ToiletUsingProblem">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
-        <skos:relatedMatch rdf:resource="http://snomed.info/id/129045003"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#d530"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#ToiletUsingProblem"/>
     
 
 
     <!-- https://w3id.org/timebank#Tools -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Tools">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Tool"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Tools"/>
     
 
 
     <!-- https://w3id.org/timebank#Transportation -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Transportation">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Transport"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Transportation"/>
     
 
 
     <!-- https://w3id.org/timebank#TransportationAvailable -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#TransportationAvailable">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Transport"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#TransportationAvailable"/>
     
 
 
     <!-- https://w3id.org/timebank#TravelCompanion -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#TravelCompanion">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Travel"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#TravelCompanion"/>
     
 
 
     <!-- https://w3id.org/timebank#UnevenTerrain -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#UnevenTerrain">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#UnevenTerrain"/>
     
 
 
     <!-- https://w3id.org/timebank#WalkingProblem -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WalkingProblem">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
-        <skos:exactMatch rdf:resource="http://snomed.info/id/156615004"/>
-        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/R26.2"/>
-        <skos:relatedMatch rdf:resource="http://who.int/icf#d450-d469"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WalkingProblem"/>
     
 
 
     <!-- https://w3id.org/timebank#Water -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Water">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Water_supply"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Water"/>
     
 
 
     <!-- https://w3id.org/timebank#WeatherConstraint -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WeatherConstraint">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
-        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Meteorology"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WeatherConstraint"/>
     
 
 
     <!-- https://w3id.org/timebank#WoodCarving -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WoodCarving">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WoodCrafting"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Woodcarving"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WoodCarving"/>
     
 
 
     <!-- https://w3id.org/timebank#WoodCrafting -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WoodCrafting">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Crafting"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Woodworking"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#WoodCrafting"/>
     
 
 
     <!-- https://w3id.org/timebank#Writing -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Writing">
-        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
-        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Writing"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/timebank#Writing"/>
     
 
 
@@ -4721,206 +4368,297 @@ A way with highway=* or a square with place=square and the corresponding name sh
         <rdfs:comment>Describes any revelant information regarding the accessibility of a location of a request.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Accessibility</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Environment"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Accessibility"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#AccessibleByPublicTransport">
         <rdfs:comment>The location is accessible by public transport.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Accessible by Public Transport</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Public_transport"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Advice">
         <rdfs:comment>Skills to provide particular services which requires some sort of education or training.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Advice</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Category:Consulting"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Allergy">
         <rdfs:comment>A collection of allergies, which is caused by hypersensitivity of the immune system.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Allergy"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/T78.4"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Assembling">
         <rdfs:comment>The skill to assemble items like furniture and other things.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Assembling</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Crafting"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#AutomobileRepair">
         <rdfs:comment>The skill to repair automobiles.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Automobile Repair</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Auto_mechanic"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Baking">
         <rdfs:comment>The skill to assist with baking.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Baking</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Baking"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Carpeting">
         <rdfs:comment>The skill to do carpenting.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Carpenting</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WoodCrafting"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/:Carpentry"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Catering">
         <rdfs:comment>The skill to assist with catering requirements.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Catering</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Catering"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Cats">
         <rdfs:comment>Indicates that cats might be present.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Cats</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Pets"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cat"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ChildCare">
         <rdfs:comment>The skill to provide care for children.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Child Care</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Child_care"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Cleaning">
         <rdfs:comment>The skill to assist with general cleaning tasks.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Cleaning</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Maintenance"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Cleaning"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ClimbingStairsDifficulty">
         <rdfs:comment>The person has difficulty in climbing up stairs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Difficulty in Climbing Stairs</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/129016000"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#d450-d469"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ClothesWashing">
         <rdfs:comment>The skill to assist with washing clothes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Clothes Washing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Cleaning"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Washing"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#CognitiveImpairment">
         <rdfs:comment>A person with cognitive impairment can&apos;t think and remember things clearly.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Cognitive Impairment</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cognitive_deficit"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F06.7"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/110352000"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#b164"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#CommonDisease">
         <rdfs:comment>A collection of diseases that are common, especially for elderly people</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Common Disease</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ComputerProcessing">
         <rdfs:comment>The skill to assist with processing data computers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Computer Processing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Computer_skills"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ComputerRepair">
         <rdfs:comment>The skill to fix problems with computers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Computer Repair</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Computer_repair_technician"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Cooking">
         <rdfs:comment>The skill to assist with cooking in general.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Cooking</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cooking"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Counseling">
         <rdfs:comment>The skill to advice people on psychological matters.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Counseling</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Advice"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Counseling"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Crafting">
         <rdfs:comment>Crafting skills.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Crafting</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Craft"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#CraftingClothes">
         <rdfs:comment>The ability to craft any kind of clothes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Crafting Clothes</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Crafting"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DancingCompanion">
         <rdfs:comment>The ability to act as a dancing companion.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Dancing Companion</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Dance"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Depression">
         <rdfs:comment>A person with depression has a depressed mood over a long period and may even have thoughts of suicide.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Depression</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
+        <skos:closeMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F32"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Depression_(mood)"/>
+        <skos:narrowMatch rdf:resource="http://snomed.info/id/154965008"/>
+        <skos:narrowMatch rdf:resource="http://snomed.info/id/154966009"/>
+        <skos:narrowMatch rdf:resource="http://snomed.info/id/154967000"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Diabetes">
         <rdfs:comment>A disorder characterized by high blood sugar levels during a long period.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Diabetes Mellitus</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Diabetes_mellitus"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/E10-E14.9"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/191044006"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Dishwashing">
         <rdfs:comment>The skill to assist with washing dishes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Dishwashing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Dishwashing"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Dogs">
         <rdfs:comment>Indicates that dogs might be present.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Dogs</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Dogs"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Dog"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DressingAssistance">
         <rdfs:comment>The skill to assist someone with dressing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Dressing Assistance</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PersonalService"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DressingProblem">
         <rdfs:comment>The person has difficulties dressing himself.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Dressing Problem</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/129039006"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#d5400"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingCars">
         <rdfs:comment>Experience in driving cars.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving Cars</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingLightVehicles"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Automobile"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingHeavyVehicles">
         <rdfs:comment>Experience in driving heavy vehicles.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving Heavy Vehicles</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Transportation"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingLightVehicles">
         <rdfs:comment>Experience in driving light vehicles.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving Light Vehicles</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Transportation"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingTractors">
         <rdfs:comment>Experience in driving tractors.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving Tractors</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingHeavyVehicles"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Tractor"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingTrucks">
         <rdfs:comment>Experience in driving with trucks.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving Trucks</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingHeavyVehicles"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Truck"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingVans">
         <rdfs:comment>Experience in driving vans.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving Vans</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingLightVehicles"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Automobile"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrivingWithTrailers">
         <rdfs:comment>Experience in driving with trailers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Driving with Trailers</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#DrivingHeavyVehicles"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Trailer_(vehicle)"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#DrugAllergy">
         <rdfs:comment>An allergy to drugs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Drug Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Allergy"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Drug_allergy"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/93431001"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/Z88"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#EggAllergy">
         <rdfs:comment>Allergy to eggs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Egg Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Egg_allergy"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/157802003"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/138050005"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ElderlyCare">
         <rdfs:comment>The skill to provide care and support for the elderly.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Care for Elderly</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Elderly_care"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Electricity">
         <rdfs:comment>Electric outlet available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Electricity</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Electricity"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ElectronicRepair">
         <rdfs:comment>The skill to repair electronic devices.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Electronic Repair</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Environment">
         <rdfs:comment>The environment describes relevant environmental factors of a request.</rdfs:comment>
@@ -4931,126 +4669,181 @@ A way with highway=* or a square with place=square and the corresponding name sh
         <rdfs:comment>An allergy to something in the environment such as dust mites, pollen, pet hair and cigarette smoke.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Environmental Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Allergy"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/426232007"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#EventPlanning">
         <rdfs:comment>The skill to assist in planning and hosting events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Event Planning</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Event_planning"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FearOfAnimals">
         <rdfs:comment>Fear of animals. This can include dogs, cats, snakes, insects, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Fear of Animals</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SpecificPhobia"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Zoophobia"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/54307006"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FearOfCats">
         <rdfs:comment>Fear of cats.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Fear of Cats</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FearOfAnimals"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Ailurophobia"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FearOfDark">
         <rdfs:comment>Fear of dark places.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Fear of Dark</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SpecificPhobia"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Fear_of_the_dark"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FearOfDogs">
         <rdfs:comment>Fear of dogs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Fear of Dogs</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FearOfAnimals"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Cynophobia"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FearOfHeights">
         <rdfs:comment>Fear or phobia of heights.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Fear of Heights</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SpecificPhobia"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Acrophobia"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/58963008"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FinancialAdvice">
         <rdfs:comment>Specialized in providing assistance with financial services. This can include helping with taxes and book keeping.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Financial Advice</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Advice"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Financial_adviser"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FoodAllergy">
         <rdfs:comment>An allergy to food such as milk, peanuts, eggs, fish, tree nuts, and fruit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Food Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Allergy"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Food_allergy"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/157801005"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FoodPreparation">
         <rdfs:comment>The skill to assist with food preparation like meat cutting, washing of food, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Food Preparation</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodService"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#FoodService">
         <rdfs:comment>The skill to provide services related to food products.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Food Service</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Food_and_drink_preparation"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Games">
         <rdfs:comment>The skill to participate in board games, card games, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Games</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#GlutenAllergy">
         <rdfs:comment>Allergies to grains with gluten such as wheat, barley, rye, and oats.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Gluten Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Wheat_allergy"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/441831003"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Groceries">
         <rdfs:comment>The skill to help buying groceries.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Groceries</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SalesService"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Grocery_store"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#HairCutting">
         <rdfs:comment>Ability to cut someone else&apos;s hair.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Hair Cutting</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PersonalService"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Hairdresser"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#HeartDisease">
         <rdfs:comment>A condition of diseases that negatively affect one&apos;s heart such as blood vessel diseases and heart rhythm problems.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Heart Diseases</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Heart_disease"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/56265001"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I51.9"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#b410"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#HouseholdEquipmentRepair">
         <rdfs:comment>The skill to repair household equipment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Houseshold Equipment Repair</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#HygieneAssitance">
         <rdfs:comment>The skill to assist someone on hygienical matters.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Hygiene Assitance</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PersonalService"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Hypertension">
         <rdfs:comment>The blood pressure is high in a long period.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Hypertension</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Hypertension"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I10-I15.9"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Hypotension">
         <rdfs:comment>The blood pressure is low in a long period.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Hypotension</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Hypotension"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I95"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Internet">
         <rdfs:comment>Internet is available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Internet</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Internet"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#InventoryManagement">
         <rdfs:comment>The skill to assist with inventory management.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Inventory Management</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Inventory"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Knitting">
         <rdfs:comment>Specialized in knitting clothes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Knitting</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CraftingClothes"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Knitting"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#LegalAdvice">
         <rdfs:comment>Specialized in providing legal assistance.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Legal Advice</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Advice"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Lawyer"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Lift">
         <rdfs:comment>A lift/elevator is available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label rdf:resource="https://w3id.org/Lift"/>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Elevator"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Limitation">
         <rdfs:comment>Limitations can be anything which prevents or limits the extent to which a user can help somebody else.</rdfs:comment>
@@ -5061,271 +4854,401 @@ A way with highway=* or a square with place=square and the corresponding name sh
         <rdfs:comment>The place is difficult to access during rainfall.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Limited Accessibility: Rain</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WeatherConstraint"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Precipitation_(meteorology)"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#LimitedAccessibilitySnow">
         <rdfs:comment>The place is difficult to access during snowfall.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Limited Accessibility: Snow</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WeatherConstraint"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Precipitation_(meteorology)"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Maintenance">
         <rdfs:comment>The skill to help with maintenance of equipment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Maintenance</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Maintenance"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#MentalDisorder">
         <rdfs:comment>Disorders that affect the mental states of a person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Mental Disorder</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
+        <skos:closeMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F00-F99.9"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Mental_disorder"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/74732009"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#b1"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#MentallyIllCare">
         <rdfs:comment>The skill to provide care for the mentally ill.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Care Mentally Ill People</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
+        <skos:narrowMatch rdf:resource="http://dbpedia.org/resource/Caring_for_people_with_dementia"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#MilkAllergy">
         <rdfs:comment>Allergy to milk.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Milk Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
+        <skos:closeMatch rdf:resource="http://snomed.info/id/197021003"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Milk_allergy"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/138049005"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#MobilityProblem">
         <rdfs:comment>Difficulties with moving around physically such as having difficulties using toliet, dressing, walking and so on.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Mobility Problem</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/Z74.0"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/102490005"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#d4"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Mopping">
         <rdfs:comment>The skill to assist with mopping floors, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Mopping</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Cleaning"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Mowing">
         <rdfs:comment>The skill to assist with mowing the grass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Mowing</rdfs:label>
+        <skos:broadMatch rdf:resource="http://dbpedia.org/resource/Category:Lawn_care"/>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Maintenance"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#NutsAllergy">
         <rdfs:comment>Allergy to nuts such as almonds, walnuts, pecans, and peanuts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Nuts Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/91934008"/>
+        <skos:narrowMatch rdf:resource="http://dbpedia.org/resource/Tree_nut_allergy"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#OfficeWork">
         <rdfs:comment>The skill to provide help with office related work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Office Work</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Category:Office_work"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#OnlineShopping">
         <rdfs:comment>The skill to assist in buying things online.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Online Shopping</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#SalesService"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Online_shopping"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PeopleCare">
         <rdfs:comment>The skill to provide care for people.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Care for People</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Caregiving"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PerformingMusic">
         <rdfs:comment>The skill to entertain others by performing music.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Performing Music</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Musical_performance"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PersonalService">
         <rdfs:comment>Personal services which include hygiene and daily care.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Personal Service</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Personal_Care_Assistant"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Pets">
         <rdfs:comment>Indicates that pets might be present.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Pets</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Environment"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Pet"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PhoneCalls">
         <rdfs:comment>The skill to perform phone calls.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Phone Calls</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Telephone_call"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PhysicalInconvenience">
         <rdfs:comment>This is a collection of physical disorders that negatively affect a person&apos;s daily life.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Physical Inconvenience</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Limitation"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PhysicallyDisabledCare">
         <rdfs:comment>The skill to provide care for the physically disabled.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Care for Physically Disabled</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Nursing"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Plumbing">
         <rdfs:comment>Skill to perform plumbing and repairs on pipe installation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Plumbing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Repair"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Plumbing"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PoorEyesight">
         <rdfs:comment>Having difficulties seeing objects clearly.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Poor Eyesight</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Blindness"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/H54"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/105597003"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#b2102"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PoorHearing">
         <rdfs:comment>Having difficulties hearing voices clearly.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Poor Hearing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
+        <skos:narrowMatch rdf:resource="http://snomed.info/id/141258002"/>
+        <skos:narrowMatch rdf:resource="http://snomed.info/id/141259005"/>
+        <skos:narrowMatch rdf:resource="http://snomed.info/id/141260000"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Deafness"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#b230"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Pruning">
         <rdfs:comment>The skill to assist with pruning shrubs and twigs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Pruning</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Maintenance"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Pruning"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#PsychoticEpisode">
         <rdfs:comment>A person with psychotic episode can not tell the difference between the reality and unreality and may have difficulty with social activities in daily life.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Psychotic Episode</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
+        <skos:closeMatch rdf:resource="http://snomed.info/id/231436002"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Psychotic_episode"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F20-F29.9"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#RecordingNotes">
         <rdfs:comment>The skill to assist with recording notes and entries.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Recording Notes</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Recreation">
         <rdfs:comment>The skill to provide services related to recreation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Recreation</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Repair">
         <rdfs:comment>The Skill to repair equipment and facilities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Repair</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Maintenance,_repair,_and_operations"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Rheumatism">
         <rdfs:comment>Diseases that causes chronic pain in joints and muscles such as back, shoulder and neck.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Rheumatism</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Rheumatism"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/29913006"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/M79.0"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SalesService">
         <rdfs:comment>The skill to help with selling and buying products.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Sales Service</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Sales"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SeafoodAllergy">
         <rdfs:comment>Allergy to any kind of seafood.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Seafood Allergy</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#FoodAllergy"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Seafood_allergy"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/91937001"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SensitiveSkin">
         <rdfs:comment>Skins are too sensitive to a wide variety of factors such as weather, pets, stress and dust.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Sensitive Skin</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Sensitive_skin_type"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#b840"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Sewing">
         <rdfs:comment>Specialized in sewing clothes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Sewing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CraftingClothes"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Sewing"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SickCare">
         <rdfs:comment>The skill to provide care for sick people.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Care for Sick People</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PeopleCare"/>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Nursing"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Skill">
         <rdfs:comment>Skills define the capabilities of a user. Users and Timebank requests can be associated to a certain skill (or multiple skills) to facilitate the matching of helper and requester.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Skill</rdfs:label>
+        <skos:closeMatch rdf:resource="http://dbpedia.org/resource/Category:Skills"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SlipperyFloor">
         <rdfs:comment>The person needs to be aware of slippery floor.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Splippery Floor</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SpeakingProblem">
         <rdfs:comment>The person has difficulties speaking clearly due to body function problems such as injuries to the brain, mouth or throat.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Speaking Problem</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#PhysicalInconvenience"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/286372005"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#d330"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#SpecificPhobia">
         <rdfs:comment>Fear of specific objects such as dogs, cats, heights, dark places, and so on.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Specific Phobia</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MentalDisorder"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Specific_phobia"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/F40.2"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/386808001"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Sports">
         <rdfs:comment>The skill to participate in sport activities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Sports</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
+        <skos:relatedMatch rdf:resource="dbt:Game"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Sport"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Stairs">
         <rdfs:comment>The person might have to climb stairs to complete the task.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Stairs</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Stairway"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#StrokeHistory">
         <rdfs:comment>It indicates a person once had a storke. A stroke happens when blood flow to the brain is blocked and oxygen for the brain cells is insufficient, which could leads to cell death.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>History of Strokes</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CommonDisease"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/138787005"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Stroke"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/I60-I69.9"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Supplies">
         <rdfs:comment>Availability of specific supplies to complete a task.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Supplies</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Environment"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Tailoring">
         <rdfs:comment>Specialized in providing tailoring services.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Tailoring</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#CraftingClothes"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Tailor"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#ToiletUsingProblem">
         <rdfs:comment>The person has difficulties using toilet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Toilet Using Problem</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
+        <skos:relatedMatch rdf:resource="http://snomed.info/id/129045003"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#d530"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Tools">
         <rdfs:comment>Tools can be provided.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Tools</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Tool"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Transportation">
         <rdfs:comment>The skill to provide services related to transportation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>TransportationServices</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Skill"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Transport"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#TransportationAvailable">
         <rdfs:comment>Transportation necessary to complete the task can be provided.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Transportation Available</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Transport"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#TravelCompanion">
         <rdfs:comment>The ability to act as a travel companion.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Travel Companion</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Recreation"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Travel"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#UnevenTerrain">
         <rdfs:comment>The person needs equipment (e.g. shoes) suitable for uneven terrain.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Uneven Terrain</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#WalkingProblem">
         <rdfs:comment>The person has difficulties walking.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Walking Problem</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#MobilityProblem"/>
+        <skos:exactMatch rdf:resource="http://snomed.info/id/156615004"/>
+        <skos:relatedMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10/R26.2"/>
+        <skos:relatedMatch rdf:resource="http://who.int/icf#d450-d469"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Water">
         <rdfs:comment>Water outlet is available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Water</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Supplies"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Water_supply"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#WeatherConstraint">
         <rdfs:comment>The place is difficult to access during bad weather (e.g. snow).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Weather Constraint</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Accessibility"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/Meteorology"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#WoodCarving">
         <rdfs:comment>The skill to Carve items out of wood.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Wood Carving</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#WoodCrafting"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Woodcarving"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#WoodCrafting">
         <rdfs:comment>Crafting skill with wood as base material.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Wood Crafting</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#Crafting"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Woodworking"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/timebank#Writing">
         <rdfs:comment>The skill to assist with written work, like writing or reading a letter.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
         <rdfs:label>Writing</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://w3id.org/timebank#OfficeWork"/>
+        <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Category:Writing"/>
     </rdf:Description>
     
 
