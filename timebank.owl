@@ -16,6 +16,9 @@
 
 <https://w3id.org/timebank> rdf:type owl:Ontology ;
                              owl:versionIRI <https://w3id.org/timebank/0.2> ;
+                             owl:imports skos: ,
+                                         time: ,
+                                         foaf: ;
                              <http://purl.org/dc/elements/1.1/title> "Timebank Ontology" ;
                              dcterms:created "2020-04-01" ;
                              dcterms:creator "Ankit Tibrewal" ,
@@ -60,30 +63,6 @@ dcterms:rights rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#broadMatch
-skos:broadMatch rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#broaderTransitive
-skos:broaderTransitive rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#closeMatch
-skos:closeMatch rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#exactMatch
-skos:exactMatch rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#narrowMatch
-skos:narrowMatch rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#relatedMatch
-skos:relatedMatch rdf:type owl:AnnotationProperty .
 
 
 ###  https://creativecommons.org/ns#license
